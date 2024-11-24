@@ -1,0 +1,435 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body, html 
+{
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+.background {
+background: url('background-image.jpg') no-repeat center center/cover;
+height: 100vh; 
+width: 100%; 
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+filter: brightness(50%);
+}
+
+.netflix-ke-lines {
+position: relative;
+z-index: 1;
+color: white;
+}
+
+.content {
+text-align: center;
+margin-top: 300px;
+}
+
+.netflix-logo {
+height: 60px; 
+width: auto;   
+margin-left: 50px;
+}
+
+input[type="email"] {
+background-color: transparent;  
+border: 2px solid rgb(46, 44, 44);         
+color: white;                    
+padding: 10px;                   
+border-radius: 5px;              
+}
+
+input[type="email"]::placeholder {
+color: white; 
+}
+
+.kids-section {
+display: flex;
+align-items: center;
+padding: 50px;
+background-color: #000;
+color: rgb(255, 250, 250);
+}
+
+.kids-section img {
+width: 500px;
+height: auto;
+margin-right: 30px;
+}
+
+.kids-section-text {
+max-width: 500px;
+}
+
+.FAQ-ke-Ques
+{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-size: 30px;
+color: #040404;
+}
+
+.FAQ-head
+{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30vh;
+font-size: 50px;
+}
+
+.box
+{
+border: 1px solid grey;
+padding: 10px;
+border-radius: 8px; 
+box-shadow: 0px 4px 10px rgba(93, 86, 86, 0.1); 
+transition: box-shadow 0.3s ease-in-out; 
+width: 800px; 
+height: 80px;
+margin: 10px 0;
+box-sizing: border-box;
+}
+
+.q
+{
+background-color: rgb(80, 76, 76);
+color: rgb(247, 243, 243);
+padding: 15px;
+border-radius: 5px;
+margin-bottom: 10px;
+border: 1px solid #4e4a4a;
+}
+
+.q:hover 
+{
+  box-shadow: 0px 6px 20px rgba(195, 190, 190, 0.2);
+}
+
+.p1, .p2, .p3, .p4, .p5, .p6 
+{
+  margin-left: 709px;
+  font-weight: 10;
+  font-size: 70px;
+  margin-top: -89px;
+}
+
+.FAQ
+{
+      background-color: black; 
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+        text-align: center; 
+}
+
+.footer-container {
+    width: 80%; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flink {
+    color: white;
+    text-decoration: none;
+      margin-bottom: 10px;
+}
+
+.flink:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #080808;
+    gap: 20px;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+}
+
+.text-container {
+    width: 50%; 
+}
+
+.vid-1 {
+    width: 400px;
+    height: auto;
+}
+
+.head1 {
+    color: #fff;
+    max-width: 500px; 
+}
+
+.lines1 {
+    color: #fcf6f6;
+}
+
+
+
+
+
+.second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: black;
+    gap: 20px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+}
+
+.img-2 {
+    width: auto; 
+    height: 400px; 
+    margin-right: 30px; 
+}
+
+.text-containe2 {
+  width: 50%; 
+}
+
+.head2 {
+  color: #fff;
+  max-width: 500px; 
+}
+
+.lines2 {
+    color: #fcf6f6;
+}
+
+
+
+
+
+.third {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #080808;
+    gap: 20px;
+}
+
+.content-container {
+  display: flex;
+    align-items: center;
+}
+
+.img-3 {
+    width: 400px; 
+    height: 300px; 
+    margin-right: 30px; 
+}
+
+.text-container3 {
+    width: 50%;
+}
+
+.head3 {
+  color: #fff;
+  max-width: 500px;
+}
+
+.lines3 {
+    color: #f6f3f3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="netflix-ke-lines">
+    <div class="container position-relative z-2">
+      <div class="d-flex justify-content-between align-items-center py-3">
+
+        <img src="net1.jpg" alt="Netflix Logo" class="netflix-logo">
+
+        <div class="d-flex align-items-center">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-0">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">हिंदी</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn btn-danger btn-sm ms-3">Sign in</button>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+      <div class="content">
+        <h1 class="display-4 fw-bold">Laughter. Tears. Thrills.</h1>
+        <h2 class="display-5 fw-bold">Find it all on Netflix.</h2>
+        <p class="lead my-3">Endless entertainment starts at just ₹149. Cancel anytime.</p>
+        <p class="lead">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="d-flex justify-content-center">
+          <input type="email" class="form-control w-50" placeholder="Email address">
+          <button class="btn btn-danger ms-2">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 50px;"></div>
+  <div class="kids-section">
+    <img src="kid.jpg.jpg" alt="Kid enjoying Netflix">
+    <div class="kids-section-text">
+      <h2 class="heading-2"><b>Create profiles for kids.</b></h2>
+      <h3 class="lines1">Send kids on adventures with their favourite characters in a space made just for them—free
+            with your membership.</h3>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 2px;"></div>
+  <div class="first">
+  <div class="video-container">
+    <video src="video.m4v" autoplay muted class="vid-1"></video>
+  </div>
+  <div class="text-container">
+    <h2 class="head1"><b>Enjoy on your TV.</b></h2>
+    <h3 class="lines1">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h3>
+  </div>
+  </div>
+
+  <div style="margin-bottom: 2px;"></div>
+  <div class="second">
+    <div class="content-container">
+        <img src="str.jpg" alt="" class="img-2">
+        <div class="text-container2">
+            <h2 class="head2"><b>Download your shows <br>to watch offline.</b></h2>
+            <h3 class="lines2">Save your favourites easily and always have something to watch.</h3>
+        </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 2px;"></div>
+  <div class="third">
+    <div class="content-container">
+        <img src="combo.jpg" alt="" class="img-3">
+        <div class="text-container3">
+            <h2 class="head3"><b>Enjoy your shows offline.</b></h2>
+            <h3 class="lines3">Download your favourite content and watch it anytime, anywhere.</h3>
+        </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 2px;"></div>
+  <div class="FAQ">
+    <h1 class="FAQ-head" style="color: white;"><b>Frequently Asked Questions</b></h1>
+
+    <div class="FAQ-ke-Ques">
+        <div class="one q"><p><b>What is Netflix ?</b></p>
+        <h2 class="p1">+</h2>
+        </div>
+        <div class="two q"><p><b> much does Netflix cost ?</b></p>
+        <h2 class="p2">+</h2>
+        </div>
+        <div class="three q"><p><b>Where can i watch ?</b></p>
+        <h2 class="p3">+</h2>
+        </div>
+        <div class="four q"><p><b>How  do i cancel ?</b></p>
+        <h2 class="p4">+</h2>
+        </div>
+        <div class="five q"><p><b>What can i watch on Netflix ?</b></p>
+        <h2 class="p5">+</h2>
+        </div>
+    </div>
+  </div>
+
+  <div class="background"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <p class="footer-text">Questions? Call 000-800-919-1694</p>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <a href="#" class="flink">FAQ</a>
+                <a href="#" class="flink">Help Centre</a>
+                <a href="#" class="flink">Account</a>
+                <a href="#" class="flink">Media Centre</a>
+            </div>
+            <div class="footer-column">
+                <a href="#" class="flink">Investor Relations</a>
+                <a href="#" class="flink">Jobs</a>
+                <a href="#" class="flink">Ways to Watch</a>
+                <a href="#" class="flink">Terms of Use</a>
+            </div>
+            <div class="footer-column">
+                <a href="#" class="flink">Privacy</a>
+                <a href="#" class="flink">Cookie Preferences</a>
+                <a href="#" class="flink">Corporate Information</a>
+                <a href="#" class="flink">Contact Us</a>
+            </div>
+            <div class="footer-column">
+                <a href="#" class="flink">Speed Test</a>
+                <a href="#" class="flink">Legal Notices</a>
+                <a href="#" class="flink">Only on Netflix</a>
+                <a href="#" class="flink">Another Link</a>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-cuJc8zroH3ho2d3BphfqlDg9LPs8MbLBznzZV88m0Q0xC1FEzLMJ/Fl8F1dGjlgQ" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
